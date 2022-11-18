@@ -13,17 +13,19 @@ namespace TestProyectoFinal
         }
 
         [TestMethod]
+        public void TestPlanPrepago()
+        {
+            double result = ProyectoFinalArqui.Program.tipoPlan("PREPAGO LIBRE");
+            Assert.AreEqual(1.70, result);
+        }
+        /*
+        [TestMethod] 
         public void TestPlanCorrecto()
         {
             bool result = ProyectoFinalArqui.Program.cobroAddons("Plan S a medida", "DATOS XS");
             Assert.AreEqual(10, result);
         }
 
-        public void TestPlanPrepago()
-        {
-            bool result = ProyectoFinalArqui.Program.tipoPlan("PREPAGO LIBRE");
-            Assert.AreEqual(1.70, result);
-        }
 
         [TestMethod]
         public void TestVigencia()
@@ -43,6 +45,6 @@ namespace TestProyectoFinal
             bool result = ProyectoFinalArqui.Program.accesoAddon("Plan S a medida");
             Assert.AreEqual(true, result);
         }
-
+        */
     }
 }
