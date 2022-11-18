@@ -6,6 +6,15 @@ namespace TestProyectoFinal
     public class UnitTest1
     {
         [TestMethod]
+        public void TestCobroConsumoPlan()
+        {
+            string result = ProyectoFinalArqui.Program.cobroConsumoPlan("XL",60);
+            Assert.AreEqual("El consumo es: " + 60, result);
+            string result2 = ProyectoFinalArqui.Program.cobroConsumoPlan("M",5);
+            Assert.AreEqual("El consumo es: " + 5, result2);
+        }
+
+        [TestMethod]
         public void TestMontoPlanes()
         {
             double result = ProyectoFinalArqui.Program.tipoPlan("PREPAGO LIBRE");
@@ -74,6 +83,15 @@ namespace TestProyectoFinal
             Assert.AreEqual(true, result2);
             bool result3 = ProyectoFinalArqui.Program.accesoAddon("PREPAGO LIBRE");
             Assert.AreEqual(false, result3);
+        }
+        
+        [TestMethod] 
+        public void testCantidadAddonMinutos()
+        {
+            double result = ProyectoFinalArqui.Program.cantidadAddonMinutos("S");
+            Assert.AreEqual(60, result);
+            double result2 = ProyectoFinalArqui.Program.cantidadAddonMinutos("M");
+            Assert.AreEqual(120, result2);
         }
     }
 }

@@ -94,6 +94,20 @@ namespace ProyectoFinalArqui
             return cantidad;
         }
 
+        public static int cantidadAddonMinutos(string tipoAddon)
+        {
+            int cantidad = 0;
+            switch (tipoAddon)
+            {
+                case "S":
+                    cantidad = 60; 
+                    break;
+                case "M":
+                    cantidad = 120; 
+                    break;
+            }
+            return cantidad;
+        }
         public static double addonCredito(string datoAddon, string planAddon)
         {
             double precio = 0; 
@@ -138,6 +152,11 @@ namespace ProyectoFinalArqui
                 value = true;
             }
             return value;
+        }
+
+        public static string cobroConsumoPlan(string plan, int consumo)
+        {
+            return "El consumo es: " + consumo;
         }
     }
 }
